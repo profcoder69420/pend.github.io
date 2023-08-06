@@ -1,0 +1,32 @@
+body{margin:0;overflow: hidden;font:.8em sans-serif}
+
+fieldset {
+  position: absolute;
+  border:1px solid #ccc;
+  margin:1em;
+}
+input[type=range] {
+  margin-right: 4em;
+}
+$styleColor:green;
+button {
+  background:$styleColor;
+  color:white;
+  border:0;
+  padding: .5em 1em;
+}
+
+input[type=range]:after {
+  content:attr(data-value);
+  display: inline-block;
+  vertical-align: middle;
+  margin-right:-4em;
+}
+input[type=range][data-unit]:after {
+  content:attr(data-value) attr(data-unit);
+}
+
+fieldset *  {
+  display: inline-block;
+  vertical-align: middle;
+}
